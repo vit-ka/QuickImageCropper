@@ -3,6 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Menu IsMainMenu="True">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_Open..." Click="MenuItemClick"/>
+            </MenuItem>
+            <MenuItem Header="_Help" />
+        </Menu>
+        <Canvas Name="canvas" Background="LightGray" Margin="0,20,0,0" 
+                PreviewMouseLeftButtonDown="CanvasPreviewMouseLeftButtonDown" 
+                PreviewMouseLeftButtonUp="CanvasPreviewMouseLeftButtonUp" 
+                PreviewMouseMove="CanvasPreviewMouseMove">
+        </Canvas>
     </Grid>
 </Window>
